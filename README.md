@@ -1,5 +1,5 @@
 # Building & Installing
-First build the project:
+First build the project (requires lib-sqlite3):
 	make
 
 Then install it into the Beryl home directory (requires Beryl to be installed!):
