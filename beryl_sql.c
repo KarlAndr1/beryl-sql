@@ -279,6 +279,8 @@ static struct i_val open_callback(const struct i_val *args, i_size n_args) {
 		return BERYL_ERR("Unable to open database");
 	}
 	
+	sqlite3_busy_timeout(db, 1000); //1 second is the default timeout
+	
 	struct i_val db_obj = beryl_new_object(&beryl_sqldb_object_class);
 	if(BERYL_TYPEOF(db_obj) == TYPE_NULL) {
 		sqlite3_close(db);
