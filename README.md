@@ -1,5 +1,6 @@
 # Building & Installing
-First build the project (requires lib-sqlite3):
+Make sure that lib-sqlite3 is installed!
+Build the project:
 ```
 make
 ```
